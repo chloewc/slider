@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="fr">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>Slider Fullscreen</title>\
+\
+<!-- Swiper CSS -->\
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>\
+\
+<style>\
+/* Full screen slider */\
+html, body \{\
+  height: 100%;\
+  margin: 0;\
+  padding: 0;\
+  background: #000;\
+\}\
+\
+.swiper \{\
+  width: 100vw;\
+  height: 100vh;\
+  margin: 0;\
+  padding: 0;\
+\}\
+\
+.swiper-slide \{\
+  display: flex;\
+  justify-content: center;\
+  align-items: center;\
+  background: #000;\
+\}\
+\
+.swiper-slide iframe,\
+.swiper-slide img,\
+.swiper-slide video,\
+.swiper-slide widget-digisnow-ski-area \{\
+  width: 100vw;\
+  height: 100vh;\
+  object-fit: cover;\
+  border: none;\
+\}\
+</style>\
+</head>\
+<body>\
+\
+<div class="swiper">\
+  <div class="swiper-wrapper">\
+\
+    <!-- Slide 1 : Webcam Morzine -->\
+    <div class="swiper-slide">\
+      <iframe src="https://app.webcam-hd.com/morzine/sommet-du-pleney"></iframe>\
+    </div>\
+\
+    <!-- Slide 2 : Photo promotionnelle -->\
+    <div class="swiper-slide">\
+      <img src="https://www.morzine-avoriaz.com/app/uploads/2025/09/drone-pas-de-laigle-sylvain-cochard-1.webp" alt="Promotion">\
+    </div>\
+\
+    <!-- Slide 3 : Bulletin neige Avoriaz -->\
+    <div class="swiper-slide">\
+      <script src="https://avoriaz.digisnow.app/widget/widget-digisnow.1.0.19.js"></script>\
+      <widget-digisnow-ski-area station="avoriaz" lang="fr" id="8"></widget-digisnow-ski-area>\
+    </div>\
+\
+    <!-- Slide 4 : \'c9tat des pistes -->\
+    <div class="swiper-slide">\
+      <p style="color:white; font-size:3em; margin:0;">12/15 pistes ouvertes, 3 remont\'e9es ferm\'e9es</p>\
+    </div>\
+\
+    <!-- Slide 5 : Test m\'e9t\'e9o (iframe) -->\
+    <div class="swiper-slide">\
+      <iframe src="https://bulletinv3.lumiplan.pro/bulletin.php?station=morzine&lang=fr&isSoir=false"></iframe>\
+    </div>\
+\
+  </div>\
+</div>\
+\
+<!-- Swiper JS -->\
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>\
+\
+<script>\
+const swiper = new Swiper('.swiper', \{\
+  loop: true,\
+  autoplay: \{\
+    delay: 8000, // 8 secondes par slide\
+    disableOnInteraction: false,\
+  \},\
+  effect: 'fade',\
+\});\
+</script>\
+\
+</body>\
+</html>\
+}
